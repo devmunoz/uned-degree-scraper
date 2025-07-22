@@ -54,7 +54,7 @@ class DegreeScraper:
                     continue
                 
                 # Detect semester
-                semester_header = row.find('td', string=re.compile(r'SEMESTRE'))
+                semester_header = row.find('td', string=re.compile(r'SEMESTRE|ANUALES'))
                 if semester_header and current_year:
                     semester_text = semester_header.get_text(strip=True)
                     current_semester = {
